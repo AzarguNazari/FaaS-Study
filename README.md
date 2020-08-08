@@ -29,7 +29,7 @@ Beside all the advantages FaaS brings, it has many challenges too which comes to
 Cold start time is the time to create a new function instance on a new container when there's not available the warm container. Since FaaS runs on trigger based mechanism and containers only live for around 5 minutes while being unused, so to not waste teh resources, unsed Function containers are stopped and when there are now available running container for FaaS, new container are created which for sure, creating a new container takes time and the time it takes depend on platform type and its between 50ms and 14 seconds. The second challange FaaS faces is the hardware hetrogeneity that makes the predication of time execution diffult. Since FaaS is connected to different other services and these hetrogenious services makes the FaaS overfall performance dependent on them, therefore, the overall performance of FaaS is depdents on external services as well. The third challange that FaaS faces is the complex triggering mechanism. 
 
 
-
-
-
-
+FaaS performance Benchmark
+For sure, FaaS as any other cloud services should have some benchmarks, therefore, we have two main benchmarks for FaaS. Micro-benchmark and Application benchmarks. 
+The micro-benchmark focuses on low-level performance of FaaS platforms such as CPU, Network and I/O, but mainly used for CPU performance, and application-benchmark is used to calculate the overall performance of a FaaS application. 
+There are available workload tests to evaluate each benchmark, such as [FaaSBench](https://github.com/kmu-bigdata/serverless-faas-workbench) which provides workload tests for different cloud providers such as AWS Lambda, Google Cloud Function, and Azure Functions. FaaSBench has workloads for testing the performance of FaaS Network, I/O, and CPU performance as well as it has workload tests for application benchmarks too. 
